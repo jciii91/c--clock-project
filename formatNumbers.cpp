@@ -5,9 +5,24 @@ using namespace std;
 
 int main()
 {
-	const int inputNumber = 1;
-	const string formattedNumber = to_string(inputNumber);
-	cout << "1 has been formatted to 0" << formattedNumber << endl;
+	const int inputNumber = -1;
+	string formattedNumber;
+	
+	if (inputNumber < 10 && inputNumber >= 0) 
+	{
+		formattedNumber = "0" + to_string(inputNumber);
+	}
+	else if (inputNumber >= 10 && inputNumber <= 12)
+	{
+		formattedNumber = to_string(inputNumber);
+	}
+	else
+	{
+		cout << "Error. Invalid input in formatNumbers." << endl;
+		return 1;
+	}
+	
+	cout << inputNumber << " has been formatted to " << formattedNumber << endl;
 
 	return 0;
 }
