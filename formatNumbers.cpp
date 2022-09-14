@@ -12,7 +12,7 @@ int main()
 	{
 		formattedNumber = "0" + to_string(inputNumber);
 	}
-	else if (inputNumber >= 10 && inputNumber <= 12)
+	else if (inputNumber >= 10 && inputNumber <= 59)
 	{
 		formattedNumber = to_string(inputNumber);
 	}
