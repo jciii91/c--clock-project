@@ -18,8 +18,16 @@ string print12hClock(string h, string m, string s) {
 	}
 	else if (stoi(hour) > 12 && stoi(hour) < 24)
 	{
-		hour = "0" + to_string(stoi(hour) - 12);
-		AMorPM = "PM";
+		if (stoi(hour) - 12 < 10)
+		{
+			hour = "0" + to_string(stoi(hour) - 12);
+			AMorPM = "PM";
+		}
+		else 
+		{
+			hour = to_string(stoi(hour) - 12);
+			AMorPM = "PM";
+		}
 	}
 	
 	const string time = hour + ":" + m + ":" + s + " " + AMorPM;
