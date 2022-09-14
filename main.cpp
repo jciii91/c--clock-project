@@ -5,6 +5,7 @@
 #include "getUserInput.h"
 #include "printBothClocks.h"
 #include "addSecond.h"
+#include "addMinute.h"
 
 using namespace std;
 
@@ -24,6 +25,9 @@ int main()
 		flag = getUserInput();
 
 		switch (flag) {
+		case 2:
+			addMinute(hour, minute);
+			break;
 		case 3:
 			addSecond(hour, minute, second);
 			break;
